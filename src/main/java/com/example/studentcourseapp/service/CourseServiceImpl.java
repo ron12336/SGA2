@@ -35,4 +35,12 @@ public class CourseServiceImpl implements CourseService {
     public Course updateCourse(Course course) {
         return courseRepository.save(course);
     }
+}@Override
+public void deleteCourse(Long id) {
+    courseRepository.deleteById(id);
+}
+
+@Override
+public boolean existsCourseById(Long id) {
+    return courseRepository.existsById(id);
 }
